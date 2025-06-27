@@ -10,8 +10,14 @@ let txtNombre = document.getElementById('nombre').value;
 let txtApellido = document.getElementById('apellido').value;
 let edad = document.getElementById('edad').value;
 
+let mensajeUsuario = document.getElementById('mensajeUsuario').value;
+
 //declaramos una variable y la vinculamos al botón Enviar
 let btn = document.getElementById('enviar');
+
+let btnLimpiar = document.getElementById('limpiar');
+
+btnLimpiar.addEventListener('click', limpiarForm);
 
 //Aplicamos al botón el evento/método addEventListener()
 btn.addEventListener('click', mostrarMensaje);
@@ -23,10 +29,16 @@ btn.addEventListener('click', mostrarMensaje);
 function mostrarMensaje(evt) {
   evt.preventDefault();
   document.getElementById('mensaje').innerText = 
-  "Bienvenido/a ".concat(txtNombre + ", " + txtApellido);
+  "Bienvenido/a ".concat(txtNombre + ", " + txtApellido).concat(", usted ");
   if(edad > 17) {
-    document.getElementById('mensaje').innerText += " Es mayor";
+    document.getElementById('mensaje').innerText +=  " es mayor , mensaje: " + mensajeUsuario;
   } else {
-    document.getElementById('mensaje').innerText += " Es menor";
+    document.getElementById('mensaje').innerText += " es menor , mensaje: " + mensajeUsuario;
   }
+}
+
+//
+function limpiarForm(evt) {
+  evt.preventDefault();
+  document.getElementById('formulario').reset();
 }

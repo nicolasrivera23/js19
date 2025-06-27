@@ -8,14 +8,21 @@
   <link rel="stylesheet" href="../css/formulario.css">
 </head>
 <body>
+
+  <header>
+    <nav>
+      <a href="#section_form">Formulario</a>
+    </nav>
+  </header>
   
   <main>
-    <section>
+    <section id="section_form">
       <h2 class="titulo">Formulario</h2>
-      <form class="formulario">
+      <form class="formulario" id="formulario">
         <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
         <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
-        <input type="number" name="edad" id="edad" placeholder="Edad" required>
+        <input type="number" name="edad" id="edad" placeholder="Edad" required min="7" max="500">
+        <textarea name="mensajeUsuario" id="mensajeUsuario" placeholder="Ingrese su mensaje"></textarea>
         <button id="enviar">Enviar</button>
         <button id="limpiar">Limpiar</button>
       </form>

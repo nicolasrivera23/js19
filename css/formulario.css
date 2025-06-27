@@ -20,7 +20,7 @@ body {
   max-width: 500px;
 }
 
-input {
+input, textarea {
   min-width: 50px;
   max-width: 300px;
   margin: 25px auto;
@@ -28,14 +28,15 @@ input {
   padding: 5px;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], textarea {
   font-family: Raleway, Verdana, Tahoma, sans-serif;
   font-size: clamp(16px, 8vw, 32px);
 }
 
 button {
-  width: 100px;
+  width: 150px;
   margin: 0 auto 25px;
+  padding: 8px;
   font-size: clamp(16px, 8vw, 32px);
   font-family: Raleway, Verdana, Tahoma, sans-serif;
   background-color: green;
@@ -50,5 +51,10 @@ button:hover {
 }
 
 .mensaje {
+  margin: 15px 15%;
   color: white;
+  border: 2px white solid;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Verdana, Tahoma, sans-serif;
 }
